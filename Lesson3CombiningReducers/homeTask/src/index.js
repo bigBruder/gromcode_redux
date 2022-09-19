@@ -1,5 +1,5 @@
 import store from './store';
-import { addUser, deleteUser } from './users.actions';
+import { addUser, deleteUser, updateUser } from './users.actions';
 import { increment, decrement, reset } from './counter.actions';
 
 store.dispatch(addUser({ name: 'Roman', id: 1 }));
