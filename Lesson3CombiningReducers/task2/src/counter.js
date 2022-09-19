@@ -27,7 +27,3 @@ export const store = createStore(
   // eslint-disable-next-line no-underscore-dangle
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
-
-store.dispatch(increment());
-store.dispatch(increment());
-store.dispatch(decrement());
