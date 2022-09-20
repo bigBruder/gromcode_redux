@@ -1,4 +1,4 @@
-export const LANGUAGE = 'LANGUAGE/SET';
+export const LANGUAGE = 'SET/LANGUAGE';
 
 export const setLanguage = lng => ({
   type: LANGUAGE,
