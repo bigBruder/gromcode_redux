@@ -3,9 +3,7 @@ export const DELETE_PRODUCT = 'PRODUCT/DELETE';
 
 export const addProduct = product => ({
   type: ADD_PRODUCT,
-  payload: {
-    product,
-  },
+  payload: { product },
 });
 
 export const removeProduct = id => ({

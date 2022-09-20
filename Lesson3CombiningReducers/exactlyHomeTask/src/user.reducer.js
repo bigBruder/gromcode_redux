@@ -1,19 +1,11 @@
 import { ADD_USER, DELETE_USER } from './user.actions';
 
-const initialState = {
-  user: null,
-};
-
-const userReducer = (state = initialState, action) => {
+const userReducer = (state = null, action) => {
   switch (action.type) {
     case ADD_USER:
-      return {
-        user: action.payload,
-      };
+      return action.payload.userData;
     case DELETE_USER:
-      return {
-        name: null,
-      };
+      return null;
     default:
       return state;
   }
