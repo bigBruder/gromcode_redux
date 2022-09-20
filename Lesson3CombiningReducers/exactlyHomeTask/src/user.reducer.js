@@ -8,12 +8,10 @@ const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD:
       return {
-        ...state,
         user: action.payload,
       };
     case DELETE:
       return {
-        ...state,
         user: null,
       };
     default:

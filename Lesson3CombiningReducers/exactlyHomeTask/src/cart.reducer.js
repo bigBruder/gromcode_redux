@@ -11,12 +11,12 @@ const productReducer = (state = initialState, action) => {
     case ADD:
       return {
         ...state,
-        products: state.cart.products.concat(action.payload),
+        products: state.cart.products.concat(action.payload.product),
       };
     case DELETE:
       return {
         ...state,
-        products: state.cart.products.filter(product => product.id !== action.payload),
+        products: state.cart.products.filter(product => product.id !== action.payload.id),
       };
     default:
       return state;
