@@ -12,7 +12,7 @@ const userReducer = (state = initialState, action) => {
       };
     case DELETE_USER:
       return {
-        user: null,
+        name: null,
       };
     default:
       return state;
