@@ -35,15 +35,14 @@ class Users extends Component {
 }
 
 const mapState = state => {
-  users: state.users.usersList;
+  return {
+    users: state.users.usersList,
+  };
 };
 
 const mapDispatch = {
   createUser: userActions.addUser,
   deleteUsers: userActions.deleteUser,
 };
-const connector = connect(mapState, mapDispatch);
 
-const ConnectedUsers = connector(Users);
-
-export default ConnectedUsers;
+export default connect(mapState, mapDispatch)(Users);
