@@ -20,14 +20,14 @@ class Users extends Component {
           Create User
         </button>
         <ul className="users__list">
-          {users.map(user => {
+          {users.map(user => (
             <li key={user.id} className="users__list-item">
-              {user.name}
-              <button onClick={() => deleteUser(user.id)} className="users_delete-btn">
+              <span>{user.name}</span>
+              <button onClick={() => deleteUser(user.id)} className="users__delete-btn">
                 +
               </button>
-            </li>;
-          })}
+            </li>
+          ))}
         </ul>
       </div>
     );
@@ -42,7 +42,7 @@ const mapState = state => {
 
 const mapDispatch = {
   createUser: userActions.addUser,
-  deleteUsers: userActions.deleteUser,
+  deleteUser: userActions.deleteUser,
 };
 
 export default connect(mapState, mapDispatch)(Users);
