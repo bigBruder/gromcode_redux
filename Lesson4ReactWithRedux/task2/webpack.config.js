@@ -9,12 +9,16 @@ module.exports = (env, argv) => {
     entry: './src/index.js',
     output: {
       filename: 'bundle.js',
+      publicPath: '/',
     },
     module: {
       rules: [
         {
-          test: /.jsx?$/,
-          use: ['babel-loader'],
+          test: /.js?$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+          },
         },
         {
           test: /.s?css$/,
@@ -39,6 +43,7 @@ module.exports = (env, argv) => {
     devServer: {
       open: true,
       hot: true,
+      historyApiFallback: true,
     },
   };
 
