@@ -21,7 +21,7 @@ const Options = ({ title, options, moveOption}) => {
 Options.PropTypes = {
     title: PropTypes.string.isRequired,
     options: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-    options: PropTypes.func.isRequired,
+    moveOption: PropTypes.func.isRequired,
 };
 
 export default (Options);
