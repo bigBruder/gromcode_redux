@@ -30,9 +30,10 @@ const options = [
       name: 'Carbon Sport Interior',
   },
 ];
+
 const initialState = {
   optionsList: options,
-  selected:[],
+  selected: [],
   }
 
 const optionsReducer = (state = initialState, action) => {
