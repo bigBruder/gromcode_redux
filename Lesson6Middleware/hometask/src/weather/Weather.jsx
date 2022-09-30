@@ -13,7 +13,7 @@ class Weather extends Component {
         <ul className="cities-list">
           {this.props.weatherData.map(weatherData => (
             <li key={weatherData.name} className="city">
-              <span className="city__name">{weatherData.name}</span>
+              <span className="city__name">{weatherData.city}</span>
               <span className="city__temperature">{weatherData.temperature}</span>
             </li>
           ))}
