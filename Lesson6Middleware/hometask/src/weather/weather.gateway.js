@@ -1,0 +1,9 @@
+const baseUrl = 'https://5e5cf5eb97d2ea001479f01.mockapi.io/api/v1/cities';
+
+export const getData = () =>
+  fetch(baseUrl).then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error();
+  });
