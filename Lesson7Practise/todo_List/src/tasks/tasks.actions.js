@@ -24,19 +24,19 @@ export const updateTask = taskId => {
   const thunkAction = function (dispatch, getState) {
     const state = getState();
     const tasksList = taskListSelector(state);
-    const tasks = tasksList.find(task => task.id === taskId);
+    const task = tasksList.find(task => task.id === taskId);
     const updatedTask = {
-      ...tasks,
-      done: !tasks.done,
+      ...task,
+      done: !task.done,
     };
-    tasksGateway.updateTask(taskId, updatedTask).then(() => dispatch(getTaskList));
+    tasksGateway.updateTask(taskId, updatedTask).then(() => dispatch(getTaskList()));
   };
   return thunkAction;
 };
 
 export const deleteTask = taskId => {
   const thunkAction = function (dispatch) {
-    tasksGateway.deleteTask(taskId).then(() => dispatch(getTaskList));
+    tasksGateway.deleteTask(taskId).then(() => dispatch(getTaskList()));
   };
   return thunkAction;
 };
@@ -47,7 +47,7 @@ export const createTask = text => {
       text,
       done: false,
     };
-    tasksGateway.createTask(taskData).then(() => dispatch(getTaskList));
+    tasksGateway.createTask(taskData).then(() => dispatch(getTaskList()));
   };
   return thunkAction;
 };

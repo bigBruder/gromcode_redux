@@ -5,12 +5,7 @@ import Task from './Task';
 const TasksList = ({ tasks, handleTaskStatusChange, handleTaskDelete }) => (
   <ul className="list">
     {tasks.map(task => (
-      <Task
-        key={task.id}
-        {...tasks}
-        onChange={handleTaskStatusChange}
-        onDelete={handleTaskDelete}
-      />
+      <Task key={task.id} {...task} onChange={handleTaskStatusChange} onDelete={handleTaskDelete} />
     ))}
   </ul>
 );

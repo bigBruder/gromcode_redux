@@ -1,4 +1,4 @@
-const baseUrl = 'https://63393790937ea77bfdc7dc64.mockapi.io/tasks';
+const baseUrl = 'https://633aae56471b8c3955724549.mockapi.io/api/v1/tasks';
 
 export const createTask = taskData =>
   fetch(baseUrl, {
@@ -23,9 +23,4 @@ export const deleteTask = id =>
     method: 'DELETE',
   });
 
-export const fetchTasksList = () =>
-  fetch(baseUrl).then(res => {
-    if (res.ok) {
-      return res.json();
-    }
-  });
+export const fetchTasksList = () => fetch(baseUrl).then(res => res.json());
