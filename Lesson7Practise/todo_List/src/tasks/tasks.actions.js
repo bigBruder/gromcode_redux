@@ -15,7 +15,9 @@ export const tasksListReceived = tasksList => {
 
 export const getTaskList = () => {
   const thunkAction = function (dispatch) {
-    tasksGateway.fetchTasksList().then(tasksList => dispatch(tasksListReceived(tasksList)));
+    tasksGateway.fetchTasksList().then(tasksList => {
+      dispatch(tasksListReceived(tasksList));
+    });
   };
   return thunkAction;
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Task = ({ id, done, text, onChange, onDelete }) => {
-  const listItemClasses = `list-item ${done ? 'list-item_done' : ''}`;
+  const listItemClasses = done ? 'list-item list-item_done' : 'list-item';
   return (
     <li className={listItemClasses}>
       <input
